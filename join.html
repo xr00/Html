@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title> 회원가입</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+   $( function() {
+     $( "#datepicker" ).datepicker();
+   } );
+ </script>
+
+	<style>
+		.ui-widget-header {background:navy; color:#fff;}
+		.btn {width:50px; height;50px; background:none;border:none; padding:0;}
+		buttin img { width:100%;}
+	</style>
+</head>
+<body>
+<form action="#" method="post">
+	<fieldset>
+		<legend>필수 입력 사항</legend>
+		<p>
+			<label for="name">이름: </label>
+			<input id="name" type="text" name="mb_name">
+		</p>
+		<p>
+			<label for="email">이메일: </label>
+			<input id="email" type="email" name="mb_mail">
+		</p>
+		<p>
+			<label for="password">비밀번호: </label>
+			<input id="password" type="password" name="mb_pw">
+		</p>
+	</fieldset>
+
+	<fieldset>
+		<legend>부가 입력 사항</legend>
+		<p>
+			<label for="datepicker">생년월일: </label>
+			<input type="text" id="datepicker" name="mb_date">
+			<!-- jqueryui.com -->
+		</p>
+		<p> 
+			<span>거주지를 선택해주세요.</span>
+			<select name="mb_address">
+				<option value="" disabled>거주지를 선택해주세요</option>
+				<option value="서울시">서울시</option>
+				<option value="경기도">경기도</option>
+				<option value="충청도">강원도</option>
+				<option value="제주도">제주도</option>
+			</select>
+		</p>
+		<p> 
+			<span>취미는?</span>
+
+			<label for="reading">독서</label><input id="reading" type="checkbox" value="독서" name="mb-interest">
+
+			<label for="travel">여행</label><input id="travel" type="checkbox" value="여행" name="mb-interest">
+
+			<label for="coding">코딩</label><input id="coding" type="checkbox" checked value="코딩" name="mb-interest">
+		</p>
+		<p>
+		<input type="submit" value="회원가입"
+	</p>
+
+
+		<p>
+			<span>성별</span>
+
+			<label for="male">남성</label>
+			<input id="male" type="radio" checked value="남성"
+			name="sex">
+		
+			<label for="female">여성</label>
+			<input id="female" type="radio" value="여성"
+			name="sex">
+		</p>
+		<p>
+			<span>사진을 등록해주세요.<span>
+			<input type="file" name="mb_avatar">
+		</p>
+		<p>
+			<span>방분경로를 말씀해주세요.
+			</span>
+			<textarea name="mb_msg" rows="10" cols="30"></textarea>
+		</p>
+		<p>
+			<span>회원약관<span>
+			<textarea name="mb_policy" readonly="readonly" rows="10" cols="100">..............................................................................................................................vvvvvvvvvvvvvvvvvvvv..........................................................</textarea>
+		</p>
+	</fieldset>
+		<p>
+			<input type="submit" value="회원가입"/>
+			<button type="submit">전송</button>
+			<input type="reset" value="재작성"/>
+			<hr/>
+			<input class="btn" type="image" src="send.png" alt="send"/>
+			<button class="btn" type="submit"><img src="send.png" alt="send"></button>
+		</p>
+</form>
+
+</body>
+</html>
